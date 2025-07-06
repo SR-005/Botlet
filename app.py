@@ -5,7 +5,7 @@ app=Flask(__name__)
 def index():
 
 
-    userinput=userinput.lower()
+    #userinput=userinput.lower()
     return render_template("index.html")
 
 if __name__=="__main__":

@@ -10,7 +10,8 @@ body{
 .h1{
     font-family: "Brunson";
     letter-spacing: 3px;
-    color: beige;
+    color: rgb(247, 247, 232);
     text-align: center;
     font-size: 110px;
+    font-style: italic;
 }
