@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "StretchPro";
-    src: url("fonts/StretchPro.otf") format("OpenType");
+    font-family: "Brunson";
+    src: url("fonts/Brunson.ttf") format("TrueType");
 }
 
 body{
@@ -8,7 +8,9 @@ body{
 }
 
 .h1{
+    font-family: "Brunson";
+    letter-spacing: 3px;
     color: beige;
     text-align: center;
-    font-size: 80px;
+    font-size: 110px;
 }
