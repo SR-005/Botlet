@@ -20,3 +20,11 @@ body{
     width: 50%;
     justify-self: center;
 }
+.form-control{
+    background-color: rgb(46, 44, 44);
+    color: aliceblue;
+}
+.form-control:focus {
+    background-color: rgb(46, 44, 44); /* stays black when focused */
+    color: aliceblue;
+}
