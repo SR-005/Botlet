@@ -15,3 +15,8 @@ body{
     font-size: 110px;
     font-style: italic;
 }
+
+.mb-3{
+    width: 50%;
+    justify-self: center;
+}
