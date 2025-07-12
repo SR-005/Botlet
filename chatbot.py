@@ -18,6 +18,6 @@ def main(userinput):
         )
         #selecting respose to user from api return
         botreply = response["choices"][0]["message"]["content"].strip()
-    except:
+    except Exception as e:
         botreply = f"Error: {str(e)}"
     return botreply
