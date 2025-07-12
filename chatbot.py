@@ -20,6 +20,4 @@ def main(userinput):
         botreply = response["choices"][0]["message"]["content"].strip()
     except:
         botreply = f"Error: {str(e)}"
-        
-    botreply=""
     return botreply
