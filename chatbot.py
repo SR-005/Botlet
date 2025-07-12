@@ -8,7 +8,15 @@ apikey = os.getenv("API_KEY")
 
 def main(userinput):
     try:
-        response=openai.ChatCompletion.create()
+        #getting respose from api
+        response=openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+             messages=[
+                    {"role": "system", "content": "You are a helpful and friendly chatbot."},
+                    {"role": "user", "content": userinput}
+                ]
+        )
+
     except:
         pass
     botreply=""
