@@ -18,8 +18,8 @@ def main(userinput):
         )
         #selecting respose to user from api return
         botreply = response["choices"][0]["message"]["content"].strip()
-
     except:
-        pass
+        botreply = f"Error: {str(e)}"
+        
     botreply=""
     return botreply
