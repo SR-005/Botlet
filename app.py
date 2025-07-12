@@ -7,8 +7,11 @@ def index():
     botreply=""
     if request.method == "POST":
         #getting message from the user
-        userinput=request.form.get("userinput")
+        #userinput=request.form.get("userinput")
+        userinput="Hi"
         botreply=botautomation(userinput)
+        print(botreply)
         return render_template("index.html")
+    
 if __name__=="__main__":
     app.run(debug=True)
