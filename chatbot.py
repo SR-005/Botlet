@@ -4,3 +4,7 @@ import os
 #for loading API Key into file
 load_dotenv()
 apikey = os.getenv("API_KEY")
+
+def main():
+    botreply=""
+    return botreply
