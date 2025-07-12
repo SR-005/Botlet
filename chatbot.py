@@ -16,6 +16,8 @@ def main(userinput):
                     {"role": "user", "content": userinput}
                 ]
         )
+        #selecting respose to user from api return
+        botreply = response["choices"][0]["message"]["content"].strip()
 
     except:
         pass
