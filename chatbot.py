@@ -1,26 +1,27 @@
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
-import json
 
-#for loading API Key into file
+# Load .env file
 load_dotenv()
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-# Configure the model
-genai.configure()
+# Read API key
+api_key = os.getenv("GEMINI_API_KEY")
+print("🔑 Using API Key:", api_key[:10] + "...")
 
-model = genai.GenerativeModel(model_name="models/gemini-pro")
+# Configure Gemini SDK
+genai.configure(api_key=api_key)
 
+# Correct model name
+model = genai.GenerativeModel("models/gemini-2.5-pro")
+
+
+# Test a prompt
 def main(userinput):
     try:
-        response=model.generate_content(userinput)
-        botreply=response.text    
-
+        response = model.generate_content(userinput)
+        print("✅ Response:", response.text)
     except Exception as e:
-        botreply = f"Error: {str(e)}"
+        print("❌ Error:", e)
 
-    print(botreply)
-    return botreply
-
-main("what is the date today?")
+main("Tell me a joke")
