@@ -4,6 +4,7 @@ import google.generativeai as genai
 
 #API Fetch Function
 def main(userinput):
+    print("-----entered mainfun------")
     #Load and Read API Ket from .env file
     load_dotenv()
     api_key = os.getenv("GEMINI_API_KEY")
@@ -12,7 +13,6 @@ def main(userinput):
     genai.configure(api_key=api_key)
     #setting up gemini model
     model = genai.GenerativeModel("models/gemini-2.5-pro")
-    print("-----entered mainfun------")
     try:
         response = model.generate_content(userinput)
         return response.text
