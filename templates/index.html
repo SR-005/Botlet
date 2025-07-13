@@ -21,8 +21,8 @@
       <!-- 🗨️ Chat Scrollable Box -->
       <div id="chat-box" class="flex-grow-1 overflow-auto my-3 p-3 bg-dark-subtle rounded-4 border border-secondary">
         {% if userinput %}
-          <div class="chat-bubble user mb-2">🧑‍💻 {{ userinput }}</div>
-          <div class="chat-bubble bot mb-2">🤖 {{ botreply }}</div>
+            <div class="chat-bubble user mb-2"><strong>YOU:</strong> {{ userinput }}</div>
+            <div class="chat-bubble bot mb-2"><strong>BOTLET:</strong> {{ botreply }}</div>
         {% else %}
           <p class="text-muted text-center">Start a conversation with Botlet...</p>
         {% endif %}
