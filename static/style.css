@@ -3,29 +3,33 @@
     src: url("fonts/Brunson.ttf") format("TrueType");
 }
 
-body{
-    background-color: rgb(20, 19, 19);
-    justify-content: end;
+body {
+  background-color: #0d1117;
+  color: #f0f6fc;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.h1{
-    font-family: "Brunson";
-    letter-spacing: 3px;
-    color: rgb(247, 247, 232);
-    text-align: center;
-    font-size: 110px;
-    font-style: italic;
+#chat-box {
+  max-height: 60vh;
+  background-color: #161b22;
+  scroll-behavior: smooth;
 }
 
-.mb-3{
-    width: 50%;
-    justify-self: center;
+.chat-bubble {
+  padding: 10px 15px;
+  border-radius: 1rem;
+  max-width: 75%;
+  word-wrap: break-word;
 }
-.form-control{
-    background-color: rgb(46, 44, 44);
-    color: aliceblue;
+
+.chat-bubble.user {
+  background-color: #238636;
+  color: white;
+  align-self: flex-end;
 }
-.form-control:focus {
-    background-color: rgb(46, 44, 44); /* stays black when focused */
-    color: aliceblue;
+
+.chat-bubble.bot {
+  background-color: #2d333b;
+  color: #f0f6fc;
+  align-self: flex-start;
 }
