@@ -15,7 +15,7 @@ def index():
 
         botreply=botautomation(userinput)
         print(botreply)
-    return render_template("index.html")
+    return render_template("index.html",botreply=botreply)
     
 if __name__=="__main__":
     app.run(debug=True)
