@@ -1,14 +1,17 @@
 import os
+from dotenv import load_dotenv
 import google.generativeai as genai
 import json
 
 #for loading API Key into file
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "directed-craft-465717-c8-d655a7741d5c.json"
+load_dotenv()
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Configure the model
 genai.configure()
 
-model = genai.GenerativeModel("gemini-pro")
+model = genai.GenerativeModel(model_name="models/gemini-pro")
+
 def main(userinput):
     try:
         response=model.generate_content(userinput)
