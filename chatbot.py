@@ -11,7 +11,7 @@ genai.configure()
 model = genai.GenerativeModel("gemini-pro")
 def main(userinput):
     try:
-        response=model.generate_content(user_input)
+        response=model.generate_content(userinput)
         botreply=response.text    
 
     except Exception as e:
