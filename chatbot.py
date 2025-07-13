@@ -2,26 +2,21 @@ import os
 from dotenv import load_dotenv
 import google.generativeai as genai
 
-# Load .env file
+#Load and Read API Ket from .env file
 load_dotenv()
-
-# Read API key
 api_key = os.getenv("GEMINI_API_KEY")
-print("🔑 Using API Key:", api_key[:10] + "...")
 
-# Configure Gemini SDK
+#configure Gemini SDK
 genai.configure(api_key=api_key)
-
-# Correct model name
+#setting up gemini model
 model = genai.GenerativeModel("models/gemini-2.5-pro")
 
-
-# Test a prompt
+#API Fetch Function
 def main(userinput):
     try:
         response = model.generate_content(userinput)
-        print("✅ Response:", response.text)
+        return response.text
     except Exception as e:
-        print("❌ Error:", e)
+        return f"Error: {e}"
 
-main("Tell me a joke")
+print(main("Tell me a joke"))
