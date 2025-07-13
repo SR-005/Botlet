@@ -25,18 +25,21 @@ body {
 .chat-bubble {
   padding: 10px 15px;
   border-radius: 1rem;
-  max-width: 75%;
+  margin-bottom: 10px;
+  max-width: 50%;
   word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .chat-bubble.user {
-  background-color: #238636;
-  color: white;
-  align-self: flex-end;
+    justify-self: right;
+    background-color: #238636;
+    color: white;
+    align-self: flex-end;
 }
 
 .chat-bubble.bot {
-  background-color: #2d333b;
-  color: #f0f6fc;
-  align-self: flex-start;
+    background-color: #2d333b;
+    color: #f0f6fc;
+    align-self: flex-start;
 }
