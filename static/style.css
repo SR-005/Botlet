@@ -9,6 +9,13 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
+.fw-bold{
+    font-family: "Brunson";
+    letter-spacing: 3px;
+    font-style: italic;
+    font-size: 100px;
+}
+
 #chat-box {
   max-height: 60vh;
   background-color: #161b22;
