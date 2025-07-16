@@ -20,4 +20,3 @@ def main(userinput):
     except Exception as e:
         return f"Error: {e}"
 
-#print(main("Tell me a joke"))
