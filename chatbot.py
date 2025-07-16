@@ -15,7 +15,7 @@ def main(userinput):
     model = genai.GenerativeModel("gemini-1.5-flash") 
     chat = model.start_chat(history=[])
     try:
-        response = model.generate_content(userinput)
+        response = chat.send_message(userinput)
         return response.text
     except Exception as e:
         return f"Error: {e}"
