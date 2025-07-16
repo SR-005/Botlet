@@ -12,7 +12,8 @@ def main(userinput):
     #configure Gemini SDK
     genai.configure(api_key=api_key)
     #setting up gemini model
-    model = genai.GenerativeModel("models/gemini-2.5-pro")
+    model = genai.GenerativeModel("gemini-1.5-flash") 
+    chat = model.start_chat(history=[])
     try:
         response = model.generate_content(userinput)
         return response.text
