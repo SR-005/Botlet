@@ -14,19 +14,26 @@
     <h1 class="display-5 fw-bold">BOTLET</h1>
   </header>
 
-  <!--Chat Container -->
+  <!-- Chat Container -->
   <main class="flex-grow-1 overflow-hidden">
     <div class="container h-100 d-flex flex-column justify-content-between">
       
+      <!-- Chat History -->
       <div id="chat-box" class="flex-grow-1 overflow-auto my-3 p-3 bg-dark-subtle rounded-4 border border-secondary">
-        {% if userinput %}
-            <div class="chat-bubble user mb-2"><strong>YOU:</strong> {{ userinput }}</div>
-            <div class="chat-bubble bot mb-2"><strong>BOTLET:</strong> {{ botreply }}</div>
+        {% if history %}
+          {% for turn in history %}
+            {% if turn.role == "user" %}
+              <div class="chat-bubble user mb-2"><strong>YOU:</strong> {{ turn.parts[0].text }}</div>
+            {% elif turn.role == "model" %}
+              <div class="chat-bubble bot mb-2"><strong>BOTLET:</strong> {{ turn.parts[0].text }}</div>
+            {% endif %}
+          {% endfor %}
         {% else %}
           <p class="text-muted text-center">Start a conversation with Botlet...</p>
         {% endif %}
       </div>
 
+      <!-- Input Form -->
       <form method="POST" class="d-flex gap-2 pb-4">
         <textarea name="userinput" rows="4" class="form-control flex-grow-1" placeholder="Type your message..." required></textarea>
         <button type="submit" class="btn btn-primary px-4">Send</button>
