@@ -20,4 +20,3 @@ def main(userinput):
         return response.text, chat.history
     except Exception as e:
         return f"Error: {e}"
-
